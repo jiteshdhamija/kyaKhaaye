@@ -12,8 +12,8 @@ import io.swagger.v3.oas.models.servers.Server;
 @Configuration
 public class OpenAPIConfiguration {
 
-   @Bean
-   public OpenAPI defineOpenApi() {
+    @Bean
+    OpenAPI defineOpenApi() {
        Server server = new Server();
        server.setUrl("http://localhost:8080");
        server.setDescription("Development");

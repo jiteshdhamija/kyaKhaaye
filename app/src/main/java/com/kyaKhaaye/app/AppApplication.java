@@ -2,8 +2,10 @@ package com.kyaKhaaye.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages="com.kyaKhaaye.Controllers")
 public class AppApplication {
 
 	public static void main(String[] args) {
