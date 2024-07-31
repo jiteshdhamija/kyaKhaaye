@@ -17,16 +17,11 @@ region varchar(255));
 (dish,cuisine,beverage,veg,course,hot,region)*/
 
 public class add {
-    public static void addToDb(String[] queries) throws SQLException, ClassNotFoundException {
+    public static void addToDb(String queries) throws SQLException, ClassNotFoundException {
         repo r = new repo();
         Connection c = r.connect();
         Statement st = c.createStatement();
-        for (int i = 0; i < queries.length; i++) {
-            st.executeQuery(queries[i]);
-        }
+        st.executeQuery(queries);
     }
 
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        addToDb(queries.queries);
-    }
 }
