@@ -4,9 +4,13 @@ import lombok.*;
 
 @Data
 public class AllFields {
-	public final String dish ="random";
-	public final String veg_non="random";
-	public final String beverage="random";
-	public final String region="random";
-	public final String type="random";
+	// id | dish | cuisine | beverage | hot | veg | course | region
+	public int id = 0;
+	public String dish = "random";
+	public String cuisine = "random";
+	public boolean beverage = true;
+	public boolean hot = false;
+	public boolean veg = true;
+	public String course = "random";
+	public String region = "random";
 }

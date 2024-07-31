@@ -1,4 +1,4 @@
-package JDBC;
+package com.kyaKhaaye.JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,9 +12,9 @@ public class repo {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
         // Specify the connection URL, username, and password
-        String url = "jdbc:sqlserver://sql12.freesqldatabse.com//sql12722175:3306;databaseName=sql12722175";
-        String username = "sql12722175";
-        String password = "enEF67NhlF";
+        String url = "jdbc:postgresql://localhost:5434/food";
+        String username = "postgres";
+        String password = "jdcp3740;;@;;";
 
         // Create the connection
         Connection connection = DriverManager.getConnection(url, username, password);
