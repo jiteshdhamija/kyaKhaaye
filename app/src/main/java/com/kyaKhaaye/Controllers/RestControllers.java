@@ -1,6 +1,8 @@
 package com.kyaKhaaye.Controllers;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +22,9 @@ public class RestControllers {
 	}
 
 	@GetMapping("/getAll")
-	public ResponseEntity<AllFields> getAll() throws SQLException, ClassNotFoundException {
-		AllFields all = new AllFields();
-		all = JDBC.getAll.getAllFields();
+	public ResponseEntity<List<AllFields>> getAll() throws SQLException, ClassNotFoundException {
+		List<AllFields> all = new ArrayList<>();
+		all = com.kyaKhaaye.JDBC.getAll.getAllFields();
 		return new ResponseEntity<>(all, HttpStatus.OK);
 	}
 }
