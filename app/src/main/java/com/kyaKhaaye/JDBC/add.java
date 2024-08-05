@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.kyaKhaaye.Resources.queries;
+// import com.kyaKhaaye.Resources.queries;
 
 /*create TABLE food ( id integer, 
 dish varchar(255),
