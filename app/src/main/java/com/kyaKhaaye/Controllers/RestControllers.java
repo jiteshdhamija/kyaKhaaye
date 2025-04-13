@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +17,7 @@ import com.kyaKhaaye.JDBC.getRandom;
 import com.kyaKhaaye.Models.AllFields;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class RestControllers {
 
 	@PostMapping("/allRandom")
@@ -46,21 +48,33 @@ public class RestControllers {
 	@GetMapping("/getDistinctCuisines")
 	public ResponseEntity<List<String>> getDistinctCuisines() throws SQLException, ClassNotFoundException {
 		List<String> all = new ArrayList<>();
-		all = com.kyaKhaaye.JDBC.getDistinct.getDistinctCuisine();
+		all.add("Cuisine 1");
+		all.add("Cuisine 2");
+		all.add("Cuisine 3");
+		all.add("Cuisine 4");
+		// all = com.kyaKhaaye.JDBC.getDistinct.getDistinctCuisine();
 		return new ResponseEntity<>(all, HttpStatus.OK);
 	}
 
 	@GetMapping("/getDistinctCourse")
 	public ResponseEntity<List<String>> getDistinctCourse() throws SQLException, ClassNotFoundException {
 		List<String> all = new ArrayList<>();
-		all = com.kyaKhaaye.JDBC.getDistinct.getDistinctCourse();
+		all.add("Course 1");
+		all.add("Course 2");
+		all.add("Course 3");
+		all.add("Course 4");
+		// all = com.kyaKhaaye.JDBC.getDistinct.getDistinctCourse();
 		return new ResponseEntity<>(all, HttpStatus.OK);
 	}
 
 	@GetMapping("/getDistinctRegion")
 	public ResponseEntity<List<String>> getDistinctRegion() throws SQLException, ClassNotFoundException {
 		List<String> all = new ArrayList<>();
-		all = com.kyaKhaaye.JDBC.getDistinct.getDistinctRegion();
+		all.add("Region 1");
+		all.add("Region 2");
+		all.add("Region 3");
+		all.add("Region 4");
+		// all = com.kyaKhaaye.JDBC.getDistinct.getDistinctRegion();
 		return new ResponseEntity<>(all, HttpStatus.OK);
 	}
 }
