@@ -1,6 +1,7 @@
 # Compiled class file
 *.class
 reactPage\node_modules
+reactPage\package-lock.json
 # Log file
 *.log
 
