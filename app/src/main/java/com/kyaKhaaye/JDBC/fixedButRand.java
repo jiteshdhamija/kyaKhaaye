@@ -33,9 +33,9 @@ public class fixedButRand {
 
     private static List<Integer> getIdList(List<AllFields> list) throws SQLException {
         List<Integer> result = new ArrayList<Integer>();
-        // for (int i = 0; i < list.size(); i++) {
-        //     result.add(list.get(i).getId());
-        // }
+        for (int i = 0; i < list.size(); i++) {
+            result.add(list.get(i).getId());
+        }
         return result;
     }
 
