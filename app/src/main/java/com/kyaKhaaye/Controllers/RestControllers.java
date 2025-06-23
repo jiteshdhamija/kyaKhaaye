@@ -48,11 +48,7 @@ public class RestControllers {
 	@GetMapping("/getDistinctCuisines")
 	public ResponseEntity<List<String>> getDistinctCuisines() throws SQLException, ClassNotFoundException {
 		List<String> all = new ArrayList<>();
-		all.add("Cuisine 1");
-		all.add("Cuisine 2");
-		all.add("Cuisine 3");
-		all.add("Cuisine 4");
-		// all = com.kyaKhaaye.JDBC.getDistinct.getDistinctCuisine();
+		all = com.kyaKhaaye.JDBC.getDistinct.getDistinctCuisine();
 		return new ResponseEntity<>(all, HttpStatus.OK);
 	}
 
