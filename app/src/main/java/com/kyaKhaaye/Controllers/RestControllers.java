@@ -59,22 +59,14 @@ public class RestControllers {
 	@GetMapping("/getDistinctCourse")
 	public ResponseEntity<List<String>> getDistinctCourse() throws SQLException, ClassNotFoundException {
 		List<String> all = new ArrayList<>();
-		all.add("Course 1");
-		all.add("Course 2");
-		all.add("Course 3");
-		all.add("Course 4");
-		// all = com.kyaKhaaye.JDBC.getDistinct.getDistinctCourse();
+		all = com.kyaKhaaye.JDBC.getDistinct.getDistinctCourse();
 		return new ResponseEntity<>(all, HttpStatus.OK);
 	}
 
 	@GetMapping("/getDistinctRegion")
 	public ResponseEntity<List<String>> getDistinctRegion() throws SQLException, ClassNotFoundException {
 		List<String> all = new ArrayList<>();
-		all.add("Region 1");
-		all.add("Region 2");
-		all.add("Region 3");
-		all.add("Region 4");
-		// all = com.kyaKhaaye.JDBC.getDistinct.getDistinctRegion();
+		all = com.kyaKhaaye.JDBC.getDistinct.getDistinctRegion();
 		return new ResponseEntity<>(all, HttpStatus.OK);
 	}
 }
